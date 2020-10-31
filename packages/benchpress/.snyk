@@ -1,0 +1,27 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - jpm > sign-addon > request > hawk > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+    - jpm > sign-addon > jsonwebtoken > joi > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+    - jpm > sign-addon > request > hawk > boom > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+    - jpm > sign-addon > request > hawk > sntp > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+    - jpm > sign-addon > jsonwebtoken > joi > topo > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+    - jpm > sign-addon > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-10-31T12:34:02.309Z'
+  'npm:lodash:20180130':
+    - jpm > fx-runner > lodash:
+        patched: '2020-10-31T12:34:02.309Z'
+  'npm:ms:20170412':
+    - jpm > sign-addon > jsonwebtoken > ms:
+        patched: '2020-10-31T12:34:02.309Z'
+  'npm:tunnel-agent:20170305':
+    - jpm > sign-addon > request > tunnel-agent:
+        patched: '2020-10-31T12:34:02.309Z'
