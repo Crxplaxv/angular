@@ -27,23 +27,26 @@
     "translated:legacy-xlf:test": "yarn ng xi18n && yarn translated:legacy-xlf:update-translations && yarn ng build --configuration=translated-legacy && yarn translated:legacy:translate -t \"../tmp/legacy-locales/messages.legacy.xlf\" && yarn translated:legacy:e2e",
     "translated:legacy-xlf:update-translations": "sed -i.bak -e 's/source>/target>'/ -e 's/Hello/Bonjour/' -e 's/source-language=\"en-US\"/source-language=\"en-US\" target-language=\"legacy\"/' ../tmp/legacy-locales/messages.legacy.xlf",
     "translated:legacy-xmb:test": "yarn ng xi18n --format=xmb --outFile=messages.legacy.xmb && yarn translated:legacy-xmb:update-translations && yarn ng build --configuration=translated-legacy-xmb && yarn translated:legacy:translate -t \"../tmp/legacy-locales/messages.legacy.xtb\" && yarn translated:legacy:e2e",
-    "translated:legacy-xmb:update-translations": "sed -e 's/messagebundle/translationbundle/' -e 's/<translationbundle>/<translationbundle lang=\"legacy\">/' -e 's/msg/translation/' -e 's/Hello/Bonjour/' -e 's/<source>.*<\\/source>//' ../tmp/legacy-locales/messages.legacy.xmb > ../tmp/legacy-locales/messages.legacy.xtb"
+    "translated:legacy-xmb:update-translations": "sed -e 's/messagebundle/translationbundle/' -e 's/<translationbundle>/<translationbundle lang=\"legacy\">/' -e 's/msg/translation/' -e 's/Hello/Bonjour/' -e 's/<source>.*<\\/source>//' ../tmp/legacy-locales/messages.legacy.xmb > ../tmp/legacy-locales/messages.legacy.xtb",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "file:../../dist/packages-dist/animations",
     "@angular/common": "file:../../dist/packages-dist/common",
     "@angular/compiler": "file:../../dist/packages-dist/compiler",
-    "@angular/core": "file:../../dist/packages-dist/core",
+    "@angular/core": "11.0.5",
     "@angular/forms": "file:../../dist/packages-dist/forms",
-    "@angular/localize": "file:../../dist/packages-dist/localize",
+    "@angular/localize": "9.0.0",
     "@angular/platform-browser": "file:../../dist/packages-dist/platform-browser",
     "@angular/platform-browser-dynamic": "file:../../dist/packages-dist/platform-browser-dynamic",
     "@angular/router": "file:../../dist/packages-dist/router",
     "core-js": "file:../../node_modules/core-js",
     "rxjs": "file:../../node_modules/rxjs",
     "tslib": "file:../../node_modules/tslib",
-    "zone.js": "file:../../dist/zone.js-dist/zone.js"
+    "zone.js": "file:../../dist/zone.js-dist/zone.js",
+    "snyk": "^1.495.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "file:../../node_modules/@angular-devkit/build-angular",
@@ -67,5 +70,6 @@
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
     "typescript": "file:../../node_modules/typescript"
-  }
+  },
+  "snyk": true
 }
