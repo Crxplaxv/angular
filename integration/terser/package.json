@@ -6,9 +6,9 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/core": "file:../../dist/packages-dist/core",
+    "@angular/core": "11.0.5",
     "@angular/compiler": "file:../../dist/packages-dist/compiler",
-    "@angular/compiler-cli": "file:../../dist/packages-dist/compiler-cli",
+    "@angular/compiler-cli": "9.0.0",
     "rxjs": "file:../../node_modules/rxjs",
     "terser": "3.17.0",
     "zone.js": "file:../../dist/zone.js-dist/zone.js"
