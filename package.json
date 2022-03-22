@@ -36,7 +36,7 @@
   "// 1": "dependencies are used locally and by bazel",
   "dependencies": {
     "@angular-devkit/architect": "0.900.0-rc.10",
-    "@angular-devkit/build-optimizer": "0.900.0-rc.10",
+    "@angular-devkit/build-optimizer": "0.900.0",
     "@angular-devkit/core": "9.0.0-rc.10",
     "@angular-devkit/schematics": "9.0.0-rc.10",
     "@angular/bazel": "file:./tools/npm/@angular_bazel",
@@ -105,7 +105,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "magic-string": "^0.25.0",
     "materialize-css": "1.0.0",
-    "minimist": "1.2.0",
+    "minimist": "1.2.6",
     "node-uuid": "1.4.8",
     "nodejs-websocket": "^1.7.2",
     "protractor": "^5.4.2",
